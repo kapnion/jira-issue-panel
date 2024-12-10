@@ -16,6 +16,10 @@ resources:
 permissions:
   scopes:
     - read:jira-work
+  external:
+    fetch:
+      backend:
+        - single-cab-444122-f7.uc.r.appspot.com
 app:
   runtime:
     name: nodejs20.x

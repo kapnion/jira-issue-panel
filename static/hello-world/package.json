@@ -5,7 +5,10 @@
   "homepage": ".",
   "dependencies": {
     "@atlaskit/css-reset": "^6.6.2",
+    "@forge/api": "^4.1.1",
     "@forge/bridge": "4.1.1",
+    "@forge/resolver": "^1.6.2",
+    "axios": "^0.21.1",
     "react": "^16",
     "react-dom": "^16"
   },

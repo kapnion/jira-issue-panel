@@ -1,5 +1,5 @@
 import Resolver from '@forge/resolver';
-import api, { route } from '@forge/api';
+import api, { route, fetch } from '@forge/api'; // Replace invokeRemote with fetch
 const resolver = new Resolver();
 
 resolver.define('fetchLabels', async (req) => {
@@ -56,6 +56,35 @@ resolver.define('fetchIssueData', async (req) => {
   }
 
   return data;
+});
+
+resolver.define('sendTextSummary', async (req) => {
+  const { textSummary } = req.payload;
+
+  try {
+    const res = await fetch('https://single-cab-444122-f7.uc.r.appspot.com/generate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ inputText: textSummary }),
+    });
+
+    if (!res.ok) {
+      throw new Error(`fetch failed: ${res.status}`);
+    }
+
+    const responseData = await res.json();
+    console.log('Completeness:', responseData.completeness);
+    console.log('Recommendations:', responseData.recommendations);
+    return {
+      completeness: responseData.completeness,
+      recommendations: responseData.recommendations,
+    };
+  } catch (error) {
+    console.error('Failed to send text summary', error);
+    return { completeness: null, recommendations: [] };
+  }
 });
 
 export const handler = resolver.getDefinitions();

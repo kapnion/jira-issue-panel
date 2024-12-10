@@ -3,6 +3,8 @@ import { events, invoke } from '@forge/bridge';
 
 function App() {
   const [data, setData] = useState(null);
+  const [completeness, setCompleteness] = useState(null);
+  const [recommendations, setRecommendations] = useState([]);
 
   const handleFetchSuccess = (data) => {
     setData(data);
@@ -14,23 +16,48 @@ function App() {
     console.error('Failed to get properties');
   };
 
-  useEffect(() => {
-    const fetchProperties = async () => invoke('fetchIssueData');
-    fetchProperties().then(handleFetchSuccess).catch(handleFetchError);
-    const subscribeForIssueChangedEvent = () =>
-      events.on('JIRA_ISSUE_CHANGED', () => {
-        fetchProperties().then(handleFetchSuccess).catch(handleFetchError);
+  const sendTextSummary = (textSummary) => {
+    invoke('sendTextSummary', { textSummary })
+      .then((response) => {
+        setCompleteness(response.completeness);
+        setRecommendations(response.recommendations);
+      })
+      .catch((error) => {
+        console.error('Failed to send text summary', error);
       });
-    const subscription = subscribeForIssueChangedEvent();
+  };
+
+  useEffect(() => {
+    const fetchProperties = () => {
+      invoke('fetchIssueData')
+        .then(handleFetchSuccess)
+        .catch(handleFetchError);
+    };
+
+    fetchProperties();
+
+    const handleIssueChanged = () => {
+      fetchProperties();
+    };
+
+    events.on('JIRA_ISSUE_CHANGED', handleIssueChanged);
 
     return () => {
-      subscription.then((subscription) => subscription.unsubscribe());
+      events.off('JIRA_ISSUE_CHANGED', handleIssueChanged);
     };
   }, []);
+
+  useEffect(() => {
+    if (data) {
+      const textSummary = extractText(data.fields).join(' ');
+      sendTextSummary(textSummary);
+    }
+  }, [data]);
 
   if (!data) {
     return <div>Loading...</div>;
   }
+
   const properties = Object.entries(data).map(([key, value]) => (
     <div key={key}>
       <strong>{key}:</strong> {JSON.stringify(value, null, 2)}
@@ -49,7 +76,6 @@ function App() {
           if (key === 'text') {
             texts.push(value);
           } else {
-            
             traverse(value);
           }
         });
@@ -58,15 +84,34 @@ function App() {
     traverse(obj);
     return texts;
   };
-  const textSummary = extractText(data.fields).join(' ');
 
   return (
     <div>
-      <span>Issue properties:</span>
-      <div>{properties}</div>
-      <div>
-        <strong>Summary:</strong> {textSummary}
-      </div>
+      
+     
+     
+      {completeness !== null && (
+        <div>
+          <strong>Completeness:</strong> {completeness}%
+          <div style={{ width: '100%', backgroundColor: '#e0e0e0' }}>
+            <div style={{ width: `${completeness}%`, backgroundColor: '#76c7c0', height: '24px' }}></div>
+          </div>
+        </div>
+      )}
+      {recommendations.length > 0 && (
+        <div>
+          <strong>Recommendations:</strong>
+          <ul>
+            {recommendations.map((rec, index) => (
+              <li key={index}>
+                <strong>{rec.area}:</strong> {rec.suggestion}
+                <br />
+                <em>Example:</em> {rec.example}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
