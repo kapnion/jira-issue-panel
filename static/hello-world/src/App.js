@@ -37,10 +37,28 @@ function App() {
     </div>
   ));
 
-  const textSummary = Object.entries(data)
-    .filter(([key, value]) => typeof value === 'string')
-    .map(([key, value]) => value)
-    .join(' ');
+  const extractText = (obj) => {
+    let texts = [];
+    const traverse = (item) => {
+      if (typeof item === 'string') {
+        texts.push(item);
+      } else if (Array.isArray(item)) {
+        item.forEach(traverse);
+      } else if (typeof item === 'object' && item !== null) {
+        Object.entries(item).forEach(([key, value]) => {
+          if (key === 'text') {
+            texts.push(value);
+          } else {
+            
+            traverse(value);
+          }
+        });
+      }
+    };
+    traverse(obj);
+    return texts;
+  };
+  const textSummary = extractText(data.fields).join(' ');
 
   return (
     <div>
