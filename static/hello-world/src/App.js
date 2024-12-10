@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { events, invoke } from '@forge/bridge';
+import { FaCheckCircle, FaSpinner } from 'react-icons/fa'; // Add FaSpinner for loading animation
 
 function App() {
   const [data, setData] = useState(null);
   const [completeness, setCompleteness] = useState(null);
   const [recommendations, setRecommendations] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   const handleFetchSuccess = (data) => {
     setData(data);
@@ -21,9 +23,11 @@ function App() {
       .then((response) => {
         setCompleteness(response.completeness);
         setRecommendations(response.recommendations);
+        setLoading(false); // Set loading to false when data is received
       })
       .catch((error) => {
         console.error('Failed to send text summary', error);
+        setLoading(false); // Set loading to false on error
       });
   };
 
@@ -58,11 +62,7 @@ function App() {
     return <div>Loading...</div>;
   }
 
-  const properties = Object.entries(data).map(([key, value]) => (
-    <div key={key}>
-      <strong>{key}:</strong> {JSON.stringify(value, null, 2)}
-    </div>
-  ));
+ 
 
   const extractText = (obj) => {
     let texts = [];
@@ -87,33 +87,57 @@ function App() {
 
   return (
     <div>
-      
-     
-     
-      {completeness !== null && (
-        <div>
-          <strong>Completeness:</strong> {completeness}%
-          <div style={{ width: '100%', backgroundColor: '#e0e0e0' }}>
-            <div style={{ width: `${completeness}%`, backgroundColor: '#76c7c0', height: '24px' }}></div>
-          </div>
+      {/* Show loading indicator if loading is true */}
+      {loading ? (
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <FaSpinner className="spinner" style={{ marginRight: '10px' }} />
+          Loading completeness data...
         </div>
-      )}
-      {recommendations.length > 0 && (
-        <div>
-          <strong>Recommendations:</strong>
-          <ul>
-            {recommendations.map((rec, index) => (
-              <li key={index}>
-                <strong>{rec.area}:</strong> {rec.suggestion}
-                <br />
-                <em>Example:</em> {rec.example}
-              </li>
-            ))}
-          </ul>
-        </div>
+      ) : (
+        <>
+          {completeness !== null && (
+            <div>
+              <strong>
+                <FaCheckCircle style={{ color: 'green', marginRight: '5px' }} />
+                Requirements Completeness:
+              </strong> {completeness}%
+              <div style={{ width: '100%', backgroundColor: '#e0e0e0' }}>
+                <div style={{ width: `${completeness}%`, backgroundColor: '#76c7c0', height: '24px' }}></div>
+              </div>
+            </div>
+          )}
+          {recommendations.length > 0 && (
+            <div>
+              <strong>Recommendations:</strong>
+              <ul>
+                {recommendations.map((rec, index) => (
+                  <li key={index}>
+                    <FaCheckCircle style={{ color: 'blue', marginRight: '5px' }} />
+                    <strong>{rec.area}:</strong> {rec.suggestion}
+                    <br />
+                    <em>Example:</em> {rec.example}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </>
       )}
     </div>
   );
 }
+
+// Add CSS for spinner animation
+const spinnerStyle = document.createElement('style');
+spinnerStyle.innerHTML = `
+  .spinner {
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+`;
+document.head.appendChild(spinnerStyle);
 
 export default App;

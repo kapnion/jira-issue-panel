@@ -10,7 +10,8 @@
     "@forge/resolver": "^1.6.2",
     "axios": "^0.21.1",
     "react": "^16",
-    "react-dom": "^16"
+    "react-dom": "^16",
+    "react-icons": "^5.4.0"
   },
   "devDependencies": {
     "react-scripts": "^5.0.1"
