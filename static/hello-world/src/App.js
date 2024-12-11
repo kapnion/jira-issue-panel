@@ -78,9 +78,10 @@ function App() {
 
     const descriptionTexts = jsonpath.query(obj, '$.description.content..content..text');
     const commentTexts = jsonpath.query(obj, '$.comment..body..content..content..text');
+    const summary = jsonpath.query(obj, '$.summary');
 
     // Combine and return as an array of strings
-    return [...descriptionTexts, ...commentTexts];
+    return [...descriptionTexts, ...commentTexts, ...summary];
   };
 
   return (
