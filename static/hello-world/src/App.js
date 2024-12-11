@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { events, invoke } from '@forge/bridge';
 import { FaCheckCircle, FaSpinner } from 'react-icons/fa'; // Add FaSpinner for loading animation
+import jsonpath from 'jsonpath'; // Add jsonpath library
 
 function App() {
   const [data, setData] = useState(null);
@@ -73,24 +74,13 @@ function App() {
   }
 
   const extractText = (obj) => {
-    let texts = [];
-    const traverse = (item) => {
-      if (typeof item === 'string') {
-        texts.push(item);
-      } else if (Array.isArray(item)) {
-        item.forEach(traverse);
-      } else if (typeof item === 'object' && item !== null) {
-        Object.entries(item).forEach(([key, value]) => {
-          if (key === 'text') {
-            texts.push(value);
-          } else {
-            traverse(value);
-          }
-        });
-      }
-    };
-    traverse(obj);
-    return texts;
+    // Filter elements under the specified JSON paths
+
+    const descriptionTexts = jsonpath.query(obj, '$.description.content..content..text');
+    const commentTexts = jsonpath.query(obj, '$.comment..body..content..content..text');
+
+    // Combine and return as an array of strings
+    return [...descriptionTexts, ...commentTexts];
   };
 
   return (

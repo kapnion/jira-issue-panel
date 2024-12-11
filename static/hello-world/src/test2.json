@@ -1,0 +1,366 @@
+{
+    "statuscategorychangedate": "2024-11-29T14:38:03.680+0000",
+    "issuetype": {
+        "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/issuetype/10003",
+        "id": "10003",
+        "description": "Eine Funktionalität oder Funktion, ausgedrückt als Benutzerziel.",
+        "iconUrl": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+        "name": "Story",
+        "subtask": false,
+        "avatarId": 10315,
+        "entityId": "13230a8b-8e7a-4c98-afcb-d4469dbd4612",
+        "hierarchyLevel": 0
+    },
+    "timespent": null,
+    "customfield_10030": null,
+    "project": {
+        "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/project/10000",
+        "id": "10000",
+        "key": "TES",
+        "name": "TestProjekt",
+        "projectTypeKey": "software",
+        "simplified": true,
+        "avatarUrls": {
+            "48x48": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/universal_avatar/view/type/project/avatar/10425",
+            "24x24": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/universal_avatar/view/type/project/avatar/10425?size=small",
+            "16x16": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/universal_avatar/view/type/project/avatar/10425?size=xsmall",
+            "32x32": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/universal_avatar/view/type/project/avatar/10425?size=medium"
+        }
+    },
+    "customfield_10031": null,
+    "customfield_10032": null,
+    "fixVersions": [],
+    "customfield_10033": null,
+    "aggregatetimespent": null,
+    "customfield_10034": null,
+    "resolution": null,
+    "customfield_10035": null,
+    "customfield_10037": null,
+    "customfield_10027": null,
+    "customfield_10028": null,
+    "customfield_10029": null,
+    "resolutiondate": null,
+    "workratio": -1,
+    "issuerestriction": {
+        "issuerestrictions": {},
+        "shouldDisplay": true
+    },
+    "watches": {
+        "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/issue/TES-1/watchers",
+        "watchCount": 1,
+        "isWatching": true
+    },
+    "lastViewed": "2024-12-11T08:04:10.283+0000",
+    "created": "2024-11-29T14:38:03.206+0000",
+    "customfield_10020": null,
+    "customfield_10021": null,
+    "customfield_10022": null,
+    "priority": {
+        "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/priority/3",
+        "iconUrl": "https://kapnion.atlassian.net/images/icons/priorities/medium.svg",
+        "name": "Medium",
+        "id": "3"
+    },
+    "customfield_10023": null,
+    "customfield_10024": null,
+    "customfield_10025": null,
+    "labels": [],
+    "customfield_10026": [],
+    "customfield_10016": null,
+    "customfield_10017": null,
+    "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+            "reason": "PLUGIN_LICENSE_ERROR",
+            "message": "Die übergeordnete Verknüpfung ist nur für Jira Premium-Benutzer verfügbar."
+        }
+    },
+    "customfield_10019": "0|hzzzzz:",
+    "timeestimate": null,
+    "aggregatetimeoriginalestimate": null,
+    "versions": [],
+    "issuelinks": [],
+    "assignee": {
+        "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/user?accountId=61227cad46c8150070f714ae",
+        "accountId": "61227cad46c8150070f714ae",
+        "emailAddress": "karsten.beuerle@gmail.com",
+        "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+            "24x24": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+            "16x16": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+            "32x32": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png"
+        },
+        "displayName": "Karsten Beuerle",
+        "active": true,
+        "timeZone": "Etc/GMT",
+        "accountType": "atlassian"
+    },
+    "updated": "2024-12-11T07:30:00.890+0000",
+    "status": {
+        "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/status/10000",
+        "description": "",
+        "iconUrl": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/",
+        "name": "Zu erledigen",
+        "id": "10000",
+        "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "Zu erledigen"
+        }
+    },
+    "components": [],
+    "timeoriginalestimate": null,
+    "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+            {
+                "type": "paragraph",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "Schreibe eine Listenansicht für Kundendaten"
+                    }
+                ]
+            }
+        ]
+    },
+    "customfield_10010": null,
+    "customfield_10014": null,
+    "customfield_10015": null,
+    "timetracking": {},
+    "customfield_10005": null,
+    "customfield_10006": null,
+    "customfield_10007": null,
+    "security": null,
+    "customfield_10008": null,
+    "customfield_10009": null,
+    "attachment": [],
+    "aggregatetimeestimate": null,
+    "summary": "Customer List Table",
+    "creator": {
+        "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/user?accountId=61227cad46c8150070f714ae",
+        "accountId": "61227cad46c8150070f714ae",
+        "emailAddress": "karsten.beuerle@gmail.com",
+        "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+            "24x24": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+            "16x16": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+            "32x32": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png"
+        },
+        "displayName": "Karsten Beuerle",
+        "active": true,
+        "timeZone": "Etc/GMT",
+        "accountType": "atlassian"
+    },
+    "subtasks": [],
+    "reporter": {
+        "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/user?accountId=61227cad46c8150070f714ae",
+        "accountId": "61227cad46c8150070f714ae",
+        "emailAddress": "karsten.beuerle@gmail.com",
+        "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+            "24x24": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+            "16x16": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+            "32x32": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png"
+        },
+        "displayName": "Karsten Beuerle",
+        "active": true,
+        "timeZone": "Etc/GMT",
+        "accountType": "atlassian"
+    },
+    "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+    },
+    "customfield_10001": null,
+    "customfield_10002": [],
+    "customfield_10003": null,
+    "customfield_10004": null,
+    "customfield_10038": null,
+    "customfield_10039": null,
+    "environment": null,
+    "duedate": null,
+    "progress": {
+        "progress": 0,
+        "total": 0
+    },
+    "votes": {
+        "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/issue/TES-1/votes",
+        "votes": 0,
+        "hasVoted": false
+    },
+    "comment": {
+        "comments": [
+            {
+                "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/issue/10000/comment/10000",
+                "id": "10000",
+                "author": {
+                    "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/user?accountId=61227cad46c8150070f714ae",
+                    "accountId": "61227cad46c8150070f714ae",
+                    "emailAddress": "karsten.beuerle@gmail.com",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "24x24": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "16x16": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "32x32": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png"
+                    },
+                    "displayName": "Karsten Beuerle",
+                    "active": true,
+                    "timeZone": "Etc/GMT",
+                    "accountType": "atlassian"
+                },
+                "body": {
+                    "type": "doc",
+                    "version": 1,
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "fgh"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "updateAuthor": {
+                    "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/user?accountId=61227cad46c8150070f714ae",
+                    "accountId": "61227cad46c8150070f714ae",
+                    "emailAddress": "karsten.beuerle@gmail.com",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "24x24": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "16x16": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "32x32": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png"
+                    },
+                    "displayName": "Karsten Beuerle",
+                    "active": true,
+                    "timeZone": "Etc/GMT",
+                    "accountType": "atlassian"
+                },
+                "created": "2024-12-10T14:35:51.026+0000",
+                "updated": "2024-12-10T14:35:51.026+0000",
+                "jsdPublic": true
+            },
+            {
+                "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/issue/10000/comment/10001",
+                "id": "10001",
+                "author": {
+                    "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/user?accountId=61227cad46c8150070f714ae",
+                    "accountId": "61227cad46c8150070f714ae",
+                    "emailAddress": "karsten.beuerle@gmail.com",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "24x24": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "16x16": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "32x32": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png"
+                    },
+                    "displayName": "Karsten Beuerle",
+                    "active": true,
+                    "timeZone": "Etc/GMT",
+                    "accountType": "atlassian"
+                },
+                "body": {
+                    "type": "doc",
+                    "version": 1,
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "fdghfdghfdg"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "updateAuthor": {
+                    "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/user?accountId=61227cad46c8150070f714ae",
+                    "accountId": "61227cad46c8150070f714ae",
+                    "emailAddress": "karsten.beuerle@gmail.com",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "24x24": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "16x16": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "32x32": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png"
+                    },
+                    "displayName": "Karsten Beuerle",
+                    "active": true,
+                    "timeZone": "Etc/GMT",
+                    "accountType": "atlassian"
+                },
+                "created": "2024-12-10T14:37:44.060+0000",
+                "updated": "2024-12-10T14:37:44.060+0000",
+                "jsdPublic": true
+            },
+            {
+                "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/issue/10000/comment/10002",
+                "id": "10002",
+                "author": {
+                    "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/user?accountId=61227cad46c8150070f714ae",
+                    "accountId": "61227cad46c8150070f714ae",
+                    "emailAddress": "karsten.beuerle@gmail.com",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "24x24": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "16x16": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "32x32": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png"
+                    },
+                    "displayName": "Karsten Beuerle",
+                    "active": true,
+                    "timeZone": "Etc/GMT",
+                    "accountType": "atlassian"
+                },
+                "body": {
+                    "type": "doc",
+                    "version": 1,
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "affe"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "updateAuthor": {
+                    "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/user?accountId=61227cad46c8150070f714ae",
+                    "accountId": "61227cad46c8150070f714ae",
+                    "emailAddress": "karsten.beuerle@gmail.com",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "24x24": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "16x16": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png",
+                        "32x32": "https://secure.gravatar.com/avatar/280a648d78145d70f467de3795adfc64?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FKB-3.png"
+                    },
+                    "displayName": "Karsten Beuerle",
+                    "active": true,
+                    "timeZone": "Etc/GMT",
+                    "accountType": "atlassian"
+                },
+                "created": "2024-12-10T14:38:03.192+0000",
+                "updated": "2024-12-10T14:38:03.192+0000",
+                "jsdPublic": true
+            }
+        ],
+        "self": "https://api.atlassian.com/ex/jira/23cfcd48-f6ee-4c94-8275-760aa6280108/rest/api/3/issue/10000/comment",
+        "maxResults": 3,
+        "total": 3,
+        "startAt": 0
+    },
+    "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+    }
+}
