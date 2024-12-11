@@ -7,6 +7,7 @@ function App() {
   const [completeness, setCompleteness] = useState(null);
   const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
+  const [error, setError] = useState(null); // Add error state
 
   const handleFetchSuccess = (data) => {
     setData(data);
@@ -19,20 +20,29 @@ function App() {
   };
 
   const sendTextSummary = (textSummary) => {
+    if (!textSummary.trim()) {
+      setLoading(false);
+      setError('Text summary is empty');
+      return;
+    }
+
     invoke('sendTextSummary', { textSummary })
       .then((response) => {
         setCompleteness(response.completeness);
         setRecommendations(response.recommendations);
         setLoading(false); // Set loading to false when data is received
+        setError(null); // Clear error on success
       })
       .catch((error) => {
         console.error('Failed to send text summary', error);
         setLoading(false); // Set loading to false on error
+        setError('Failed to send text summary');
       });
   };
 
   useEffect(() => {
     const fetchProperties = () => {
+      setLoading(true);
       invoke('fetchIssueData')
         .then(handleFetchSuccess)
         .catch(handleFetchError);
@@ -61,8 +71,6 @@ function App() {
   if (!data) {
     return <div>Loading...</div>;
   }
-
- 
 
   const extractText = (obj) => {
     let texts = [];
@@ -93,6 +101,8 @@ function App() {
           <FaSpinner className="spinner" style={{ marginRight: '10px' }} />
           Loading completeness data...
         </div>
+      ) : error ? (
+        <div style={{ color: 'red' }}>{error}</div>
       ) : (
         <>
           {completeness !== null && (
